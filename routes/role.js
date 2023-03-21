@@ -23,7 +23,7 @@ router.post('/create', middleware, (req, res) => {
 })
 
 //Get all Method
-router.get('/getAll', middleware, (req, res) => {
+router.get('/getAll', (req, res) => {
     let roles = Role.find({}, function(err, roles){
         if(err){
             console.log(err);
